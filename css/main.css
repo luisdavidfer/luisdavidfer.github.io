@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+body {
+    margin: 0;
+    background: #fff;
+    user-select: none;
+}
+
+#container {
+    width: 720px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container img {
+    width: 500px;
+    height: 100%;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: -250px;
+    z-index: -1;
+}
+
+#links {
+    display: block;
+    margin-left: 100px;
+}
+
+#links a {
+    color: rgb(80, 80, 80);;
+    font-size: 150px;
+    line-height: 150px;
+    font-weight: bold;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+#links a:hover {
+    text-decoration-line: underline;
+}
+
+/* Breakpoints */
+
+@media (min-width: 480px) {
+    #container {
+        width: 100%;
+    }
+    #container img {
+        width: 250px;
+        left: -10%;
+    }
+    #links {
+        margin-left: 25%;
+    }
+    #links a{
+        font-size: 75px;
+        line-height: 75px;
+    }
+}
+
+@media (min-width: 640px) {
+    #container {
+        width: 720px;
+    }
+    #container img {
+        width: 350px;
+        left: -75px;
+    }
+    #links {
+        margin-left: 200px;
+    }
+    #links a{
+        font-size: 100px;
+        line-height: 100px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #container {
+        width: 720px;
+    }
+    #container img {
+        width: 450px;
+        left: -200px;
+    }
+    #links {
+        margin-left: 120px;
+    }
+    #links a{
+        font-size: 130px;
+        line-height: 130px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #container {
+        width: 720px;
+    }
+    #container img {
+        width: 500px;
+        left: -250px;
+    }
+    #links {
+        margin-left: 100px;
+    }
+    #links a{
+        font-size: 150px;
+        line-height: 150px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    #container {
+        width: 100%;
+    }
+    #container img {
+        width: 80%;
+        padding: 10%;
+        transform: unset;
+        margin-top: -250px;
+        left: 0;
+    }
+    #links {
+        width: 100%;
+        text-align: right;
+        margin: unset;
+    }
+    #links a{
+        font-size: 60px;
+        line-height: 70px;
+        padding-right: 20px;
+    }
+}

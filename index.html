@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis David Fernández Marín</title>
+	<meta name="author" content="Luis David Fernández Marín">
+    <meta name="description" content="Luis David Fernández Marín personal site.">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" type="text/css"  href="css/main.css">
+    <link rel="stylesheet" type="text/css"  href="css/modal.css">
+    <script src="js/modal.js"></script>
+</head>
+<body ondragstart="return false;">
+    <div id="container">
+        <img src="assets/luisdavidfer.svg">
+        <div id="links">
+            <a href="">Blog</a>
+            <br>
+            <a href="">GitHub</a>
+            <br>
+            <a href="">LinkedIn</a>
+            <br>
+            <a onclick="displayModal()">Contact</a>
+        </div>
+    </div>
+
+    <div id="modal">
+        <button class="after-hide" id="close-button" onclick="closeModal()">
+            <span>&#10006;</span>
+        </button>
+        <form>
+            <span class="form-title">Let's talk !</span>
+            <input class="form-input after-hide" type="text" name="name" placeholder="Full Name">		
+            <input class="form-input after-hide" type="email" name="email" placeholder="E-mail">
+            <textarea class="form-input after-hide" name="message" placeholder="Your Message"></textarea>
+            <button class="after-hide" type="button" onclick="sendForm()" name="send">Send</button>
+        </form>
+    </div>
+</body>
+</html>
