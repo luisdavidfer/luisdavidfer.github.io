@@ -1,37 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 body {
     margin: 0;
     background: #fff;
     user-select: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #container {
-    width: 720px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#container img {
-    width: 500px;
+    width: 100%;
     height: 100%;
-    transform: rotate(-90deg);
-    position: absolute;
-    left: -250px;
-    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#links {
-    display: block;
-    margin-left: 100px;
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#profile {
+    position: relative;
+    margin-right: 30px;
+}
+
+#profile img {
+    width: 250px;
+    margin: 25px;
+    border-radius: 50%;
+
+}
+
+#profile h1 {
+    color: rgb(80, 80, 80);
+    line-height: 15px;
+    font-weight: 700;
+}
+
+#profile h2 {
+    color: rgb(160, 160, 160);
+    font-weight: 400;
+}
+
+#links {    
+    position: relative;
 }
 
 #links a {
-    color: rgb(80, 80, 80);;
+    color: rgb(80, 80, 80);
     font-size: 150px;
     line-height: 150px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     outline: 0;
     cursor: pointer;
@@ -43,51 +63,28 @@ body {
 
 /* Breakpoints */
 
-@media (min-width: 480px) {
-    #container {
-        width: 100%;
-    }
-    #container img {
-        width: 250px;
-        left: -10%;
-    }
-    #links {
-        margin-left: 25%;
-    }
-    #links a{
-        font-size: 75px;
-        line-height: 75px;
+@media (max-height: 500px){
+    #container{
+        align-items: flex-start;
     }
 }
 
-@media (min-width: 640px) {
-    #container {
-        width: 720px;
+@media (max-width: 1024px){
+    #profile{
+        margin: 30px auto;
+        padding: 0 50px;
     }
-    #container img {
-        width: 350px;
-        left: -75px;
-    }
-    #links {
-        margin-left: 200px;
+    #links{
+        margin: auto;
     }
     #links a{
-        font-size: 100px;
-        line-height: 100px;
+        font-size: 60px;
+        line-height: 70px;
+        padding-right: 20px;
     }
 }
 
-@media (min-width: 1024px) {
-    #container {
-        width: 720px;
-    }
-    #container img {
-        width: 450px;
-        left: -200px;
-    }
-    #links {
-        margin-left: 120px;
-    }
+@media (min-width: 1024px) and (max-width: 1200px){
     #links a{
         font-size: 130px;
         line-height: 130px;
@@ -95,43 +92,11 @@ body {
 }
 
 @media (min-width: 1200px) {
-    #container {
-        width: 720px;
-    }
-    #container img {
-        width: 500px;
-        left: -250px;
-    }
-    #links {
-        margin-left: 100px;
+    #profile {
+        margin-right: 50px;
     }
     #links a{
         font-size: 150px;
         line-height: 150px;
-    }
-}
-
-/* Mobile */
-
-@media (max-width: 480px) {
-    #container {
-        width: 100%;
-    }
-    #container img {
-        width: 80%;
-        padding: 10%;
-        transform: unset;
-        margin-top: -250px;
-        left: 0;
-    }
-    #links {
-        width: 100%;
-        text-align: right;
-        margin: unset;
-    }
-    #links a{
-        font-size: 60px;
-        line-height: 70px;
-        padding-right: 20px;
     }
 }
